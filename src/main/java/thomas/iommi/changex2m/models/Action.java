@@ -5,22 +5,22 @@ import org.dom4j.Element;
 public class Action {
 
 	private String sviluppatore;
-	private String tipo;
+	private ActionType tipo;
 	private String data;
 	private String testo;
 
-	Action(Element actionElement) {
+	public Action(Element actionElement) {
 		this.sviluppatore = actionElement.attributeValue("dev");
-		this.tipo = actionElement.attributeValue("type");
+		this.tipo = ActionType.fromString(actionElement.attributeValue("type"));
 		this.data = actionElement.attributeValue("data");
-		this.testo = actionElement.getText().trim();
+		this.testo = actionElement.getText().trim().replaceAll("\n+\t+", "\n  ");
 	}
 
 	public String getSviluppatore() {
 		return sviluppatore;
 	}
 
-	public String getTipo() {
+	public ActionType getTipo() {
 		return tipo;
 	}
 
