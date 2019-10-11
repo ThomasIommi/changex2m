@@ -8,28 +8,28 @@ import java.util.List;
 
 public class Release {
 
-	private String versione;
-	private String data;
-	private List<Action> azioni;
+	private String version;
+	private String date;
+	private List<Action> actions;
 
 	public Release(Element releaseElement) {
-		this.versione = releaseElement.attributeValue("version", "n/d");
-		this.data = releaseElement.attributeValue("date", "n/d");
-		this.azioni = new ArrayList<>();
+		this.version = releaseElement.attributeValue("version", "n/d");
+		this.date = releaseElement.attributeValue("date", "n/d");
+		this.actions = new ArrayList<>();
 		for (Node actionNode : releaseElement.selectNodes("action")) {
-			this.azioni.add(new Action((Element) actionNode));
+			this.actions.add(new Action((Element) actionNode));
 		}
 	}
 
-	public String getVersione() {
-		return versione;
+	public String getVersion() {
+		return version;
 	}
 
-	public String getData() {
-		return data;
+	public String getDate() {
+		return date;
 	}
 
-	public List<Action> getAzioni() {
-		return azioni;
+	public List<Action> getActions() {
+		return actions;
 	}
 }

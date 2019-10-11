@@ -10,7 +10,7 @@ import java.util.List;
 public class Changes {
 
 	private String appName;
-	private List<Release> rilasci = new ArrayList<>();
+	private List<Release> releases = new ArrayList<>();
 
 	public Changes(Document changesXML) {
 		try {
@@ -19,7 +19,7 @@ public class Changes {
 			System.err.println("Error during the parsing of the application name!");
 		}
 		for (Node releaseNode : changesXML.selectNodes("/document/body/release")) {
-			this.rilasci.add(new Release((Element) releaseNode));
+			this.releases.add(new Release((Element) releaseNode));
 		}
 	}
 
@@ -27,8 +27,8 @@ public class Changes {
 		return appName;
 	}
 
-	public List<Release> getRilasci() {
-		return rilasci;
+	public List<Release> getReleases() {
+		return releases;
 	}
 
 }

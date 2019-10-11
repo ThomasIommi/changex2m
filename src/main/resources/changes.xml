@@ -9,6 +9,8 @@
 		<release version="1.1" date="2005-03-01" description="Subsequent release">
 			<action dev="jruiz" type="add">
 				Added additional documentation on how to configure the plugin.
+				(*) More indented details
+				(*) With this sintax!
 			</action>
 			<action dev="aramirez" type="fix" issue="MPJIRA-11">
 				Enable retrieving component-specific issues.

@@ -10,11 +10,9 @@ import thomas.iommi.changex2m.models.MarkDownBuilder;
 import thomas.iommi.changex2m.models.Release;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 public class MdWriter {
 
@@ -25,30 +23,30 @@ public class MdWriter {
         mdBuilder.addPart(new Heading("Change Log - " + changes.getAppName(), 1));
 
         // releases
-        for (Release release : changes.getRilasci()) {
-            mdBuilder.addPart(new Heading("["+release.getVersione()+"] - "+release.getData(), 2));
+        for (Release release : changes.getReleases()) {
+            mdBuilder.addPart(new Heading("["+release.getVersion()+"] - "+release.getDate(), 2));
 
             // sort by type
-            release.getAzioni().sort(Comparator.comparing(Action::getTipo));
+            release.getActions().sort(Comparator.comparing(Action::getType));
 
             // actions
             UnorderedList<UnorderedListItem> added = new UnorderedList<>(new ArrayList<>());
             UnorderedList<UnorderedListItem> fixed = new UnorderedList<>(new ArrayList<>());
             UnorderedList<UnorderedListItem> updated = new UnorderedList<>(new ArrayList<>());
             UnorderedList<UnorderedListItem> removed = new UnorderedList<>(new ArrayList<>());
-            for (Action action : release.getAzioni()) {
-                switch (action.getTipo()) {
+            for (Action action : release.getActions()) {
+                switch (action.getType()) {
                     case ADD:
-                        added.getItems().add(new UnorderedListItem(action.getTesto()));
+                        added.getItems().add(new UnorderedListItem(action.getText()));
                         break;
                     case FIX:
-                        fixed.getItems().add(new UnorderedListItem(action.getTesto()));
+                        fixed.getItems().add(new UnorderedListItem(action.getText()));
                         break;
                     case UPDATE:
-                        updated.getItems().add(new UnorderedListItem(action.getTesto()));
+                        updated.getItems().add(new UnorderedListItem(action.getText()));
                         break;
                     case REMOVE:
-                        removed.getItems().add(new UnorderedListItem(action.getTesto()));
+                        removed.getItems().add(new UnorderedListItem(action.getText()));
                         break;
                 }
             }

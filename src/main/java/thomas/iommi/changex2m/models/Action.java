@@ -4,31 +4,33 @@ import org.dom4j.Element;
 
 public class Action {
 
-	private String sviluppatore;
-	private ActionType tipo;
-	private String data;
-	private String testo;
+	private String developer;
+	private ActionType type;
+	private String date;
+	private String text;
 
 	public Action(Element actionElement) {
-		this.sviluppatore = actionElement.attributeValue("dev");
-		this.tipo = ActionType.fromString(actionElement.attributeValue("type"));
-		this.data = actionElement.attributeValue("data");
-		this.testo = actionElement.getText().trim().replaceAll("\n+\t+", "\n  ");
+		this.developer = actionElement.attributeValue("dev");
+		this.type = ActionType.fromString(actionElement.attributeValue("type"));
+		this.date = actionElement.attributeValue("data");
+		this.text = actionElement.getText().trim()
+				.replaceAll("\n+\\s+", "\n  ")
+				.replaceAll("(\n+\\s*)\\(\\*\\)", "$1\\*");
 	}
 
-	public String getSviluppatore() {
-		return sviluppatore;
+	public String getDeveloper() {
+		return developer;
 	}
 
-	public ActionType getTipo() {
-		return tipo;
+	public ActionType getType() {
+		return type;
 	}
 
-	public String getData() {
-		return data;
+	public String getDate() {
+		return date;
 	}
 
-	public String getTesto() {
-		return testo;
+	public String getText() {
+		return text;
 	}
 }

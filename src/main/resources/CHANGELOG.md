@@ -7,6 +7,8 @@ Change Log - Changes Tester Project
 ### Added
 
 - Added additional documentation on how to configure the plugin.
+  * More indented details
+  * With this sintax!
 
 ### Fixed
 
