@@ -8,8 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Java 11+
-Maven 3.6.0+
+* Java 11+
+* Maven 3.6.0+
 
 ### Installing/Compiling
 
