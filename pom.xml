@@ -73,22 +73,15 @@
                     </archive>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>repackage</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <mainClass>thomas.iommi.changex2m.converter.ChangeX2M</mainClass>-->
-<!--                            <finalName>changex2m</finalName>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
         </plugins>
     </build>
+
+    <developers>
+        <developer>
+            <id>thomas</id>
+            <name>Thomas Iommi</name>
+            <email>thomasiommi6r@gmail.com</email>
+        </developer>
+    </developers>
 
 </project>
