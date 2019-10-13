@@ -9,7 +9,7 @@ public class Action {
 	private String date;
 	private String text;
 
-	public Action(Element actionElement) {
+	Action(Element actionElement) {
 		this.developer = actionElement.attributeValue("dev");
 		this.type = ActionType.fromString(actionElement.attributeValue("type"));
 		this.date = actionElement.attributeValue("data");

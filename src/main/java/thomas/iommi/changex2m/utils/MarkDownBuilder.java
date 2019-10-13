@@ -1,4 +1,4 @@
-package thomas.iommi.changex2m.models;
+package thomas.iommi.changex2m.utils;
 
 import net.steppschuh.markdowngenerator.MarkdownElement;
 
@@ -6,9 +6,9 @@ public class MarkDownBuilder {
 
     private StringBuilder stringBuilder = new StringBuilder();
 
-    public MarkDownBuilder() {}
+    MarkDownBuilder() {}
 
-    public void addPart(MarkdownElement mdElement) {
+    void addPart(MarkdownElement mdElement) {
         this.stringBuilder.append(mdElement).append("\n\n");
     }
 

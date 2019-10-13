@@ -12,7 +12,7 @@ public class Release {
 	private String date;
 	private List<Action> actions;
 
-	public Release(Element releaseElement) {
+	Release(Element releaseElement) {
 		this.version = releaseElement.attributeValue("version", "n/d");
 		this.date = releaseElement.attributeValue("date", "n/d");
 		this.actions = new ArrayList<>();
