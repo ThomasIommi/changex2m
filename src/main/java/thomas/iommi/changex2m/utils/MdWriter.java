@@ -6,7 +6,6 @@ import net.steppschuh.markdowngenerator.list.UnorderedListItem;
 import net.steppschuh.markdowngenerator.text.heading.Heading;
 import thomas.iommi.changex2m.models.Action;
 import thomas.iommi.changex2m.models.Changes;
-import thomas.iommi.changex2m.models.MarkDownBuilder;
 import thomas.iommi.changex2m.models.Release;
 
 import java.io.File;
