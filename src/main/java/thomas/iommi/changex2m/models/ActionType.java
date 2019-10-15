@@ -2,7 +2,7 @@ package thomas.iommi.changex2m.models;
 
 public enum ActionType {
     ADD,
-    UPDATE,
+    CHANGE,
     REMOVE,
     FIX;
 
@@ -17,7 +17,7 @@ public enum ActionType {
                 return FIX;
             case "update":
             default:
-                return UPDATE;
+                return CHANGE;
         }
     }
 }

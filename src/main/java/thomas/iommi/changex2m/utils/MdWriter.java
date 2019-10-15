@@ -41,7 +41,7 @@ public class MdWriter {
                     case FIX:
                         fixed.getItems().add(new UnorderedListItem(action.getText()));
                         break;
-                    case UPDATE:
+                    case CHANGE:
                         updated.getItems().add(new UnorderedListItem(action.getText()));
                         break;
                     case REMOVE:
@@ -58,7 +58,7 @@ public class MdWriter {
                 mdBuilder.addPart(fixed);
             }
             if (!updated.getItems().isEmpty()) {
-                mdBuilder.addPart(new Heading("Updated", 3));
+                mdBuilder.addPart(new Heading("Changed", 3));
                 mdBuilder.addPart(updated);
             }
             if (!removed.getItems().isEmpty()) {
