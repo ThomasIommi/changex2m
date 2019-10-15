@@ -33,7 +33,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Thomas Iommi** - *Initial work* - [ThomasIommi](https://github.com/ThomasIommi)
+* **Thomas Iommi** - *Initial work* - [GitHub](https://github.com/ThomasIommi)
 
 ## License
 

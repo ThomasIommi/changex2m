@@ -67,16 +67,7 @@ public class MdWriter {
             }
         }
 
-        File output = new File("/home/thomas/Projects/Java/changex2m/src/main/resources/CHANGELOG.md");
-        if (!output.exists()) {
-            output.createNewFile();
-        }
-
         return mdBuilder.toString();
-    }
-
-    private static void addPart(StringBuilder mdResult, MarkdownElement markdownElement) {
-        mdResult.append(markdownElement).append("/n");
     }
 
 }

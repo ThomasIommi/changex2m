@@ -22,7 +22,7 @@ Change Log - Changes Tester Project
 [1.0] - 2005-01-01
 ------------------
 
-### Updated
+### Changed
 
 - Uploaded documentation on how to use the plugin.
 
