@@ -2,18 +2,23 @@
 
 Parses your Maven [changes.xml](https://maven.apache.org/plugins/maven-changes-plugin/changes.html) file and write the corresponding [CHANGELOG.md](https://keepachangelog.com/en/0.3.0/).
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
+## Prerequisites
 
 * Java 11+
 * Maven 3.6.0+
 
-### Installing/Compiling
+## Installing / Compiling
 
 `mvn clean install` on the project root folder.
+
+## Running 
+
+The previous command will generate a jar named _changex2m.jar_.
+
+Usage:
+`java -jar changex2m.jar [changes.xml input path] [CHANGELOG.md output path]`
+
+In case input or output path are not specified, _./changes.xml_ and _./CHANGELOG.md_ will be used respectively
 
 ## Running the tests
 
